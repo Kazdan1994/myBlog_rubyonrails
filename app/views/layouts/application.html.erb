@@ -2,13 +2,24 @@
 <html>
 <head>
   <title>MyBlogRubyonrails</title>
+
+  <!-- Latest compiled and minified CSS bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <p class="navbar-text">My first blog with Ruby on Rails navbar-right</p>
+  </div>
+</nav>
 
 <%= yield %>
 
 </body>
+<!-- Latest compiled and minified JavaScript bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </html>
