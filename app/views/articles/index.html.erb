@@ -1,16 +1,23 @@
 <div class="container">
   <div class="container-fluid">
 
+    <!-- Je récupère la liste de mes articles et j'itère dessus pour afficher des <div>
+    contenant mes articles -->
     <% @articles.each do |a| %>
-        <div class="jumbotron">
+        <div class="well">
 
           <h1>
             <%= a.title %>
           </h1>
 
-          <p class="text-center">
-            <%= link_to "Lire l'article", article_path(a) %>
-          </p>
+            <p class="text-right">
+                <!--
+                Lien pour consulter l'article. La méthode article_path est généré par Ruby,
+                il suffit d'indiquer dans routes.rb as: :article
+                cela permet d'afficher un lien vers chaque article.
+                 -->
+                <%= link_to "Lire l'article", article_path(a) %>
+            </p>
 
         </div>
     <% end %>

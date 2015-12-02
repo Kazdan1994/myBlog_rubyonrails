@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-  root 'articles#index'
+  root 'articles#index' # Route principale
 
+  # Cette route permet d'afficher le template show.html.erb
+  # avec un article récupéré en fonction de son id
+  # as: :article permet de généré la méthode article_path pour les liens
   get '/articles/:id' => 'articles#show', as: :article
 
   # The priority is based upon order of creation: first created -> highest priority.
