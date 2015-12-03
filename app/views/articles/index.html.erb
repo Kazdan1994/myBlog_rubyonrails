@@ -1,25 +1,33 @@
 <div class="container">
   <div class="container-fluid">
-
     <!-- Je récupère la liste de mes articles et j'itère dessus pour afficher des <div>
     contenant mes articles -->
-    <% @articles.each do |a| %>
-        <div class="well">
+    <!-- Pagination -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          <%= paginate @articles %>
 
-          <h1>
-            <%= a.title %>
-          </h1>
+        <div class="panel-body">
+            <% @articles.each do |a| %>
+                <div class="alert alert-info">
 
-            <p class="text-right">
-                <!--
-                Lien pour consulter l'article. La méthode article_path est généré par Ruby,
-                il suffit d'indiquer dans routes.rb as: :article
-                cela permet d'afficher un lien vers chaque article.
-                 -->
-                <%= link_to "Lire l'article", article_path(a) %>
-            </p>
+                  <h1>
+                    <%= a.title %>
+                  </h1>
 
+                    <p class="text-right">
+                        <!--
+                        Lien pour consulter l'article. La méthode article_path est généré par Ruby,
+                        il suffit d'indiquer dans routes.rb as: :article
+                        cela permet d'afficher un lien vers chaque article.
+                         -->
+                        <%= link_to "Lire l'article", article_path(a) %>
+                    </p>
+
+                </div>
+            <% end %>
         </div>
-    <% end %>
+      </div>
+    </div>
   </div>
 </div>
