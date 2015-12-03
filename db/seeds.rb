@@ -14,3 +14,4 @@ article1 = Article.create(title: "Un blog avec Ruby on Rails", content: "Lorem i
 article2 = Article.create(title: "Ruby on Rails", content: "Web development hurt Ruby on Rails is an open-source web framework thats optimized for programmer happiness and sustainable productivity. It lets you write beautiful code by favoring convention over configuration.")
 
 article3 = Article.create(title: "blog", content: "A blog is your best bet for a voice among the online crowd. It is a personal website, packed with features, as easy to use as your e-mail.")
+
